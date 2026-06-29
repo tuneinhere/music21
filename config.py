@@ -65,8 +65,8 @@ YT_API_URL = os.getenv("YT_API_URL", "https://shrutibots.site")
 
 # --- Image URLs ---
 START_IMG_URL = os.getenv("START_IMG_URL", "https://files.catbox.moe/u05mzo.jpg")
-_DEFAULT_IMG = "https://files.catbox.moe/u05mzo.jpg"
-PING_IMG_URL = os.getenv("PING_IMG_URL", _DEFAULT_IMG)
+_DEFAULT_IMG = "https://ibb.co.com/Gv1bCJs3"
+PING_IMG_URL = os.getenv("PING_IMG_URL", "https://ibb.co.com/Gv1bCJs3")
 PLAYLIST_IMG_URL = os.getenv("PLAYLIST_IMG_URL", _DEFAULT_IMG)
 STATS_IMG_URL = os.getenv("STATS_IMG_URL", _DEFAULT_IMG)
 TELEGRAM_AUDIO_URL = os.getenv("TELEGRAM_AUDIO_URL", _DEFAULT_IMG)
