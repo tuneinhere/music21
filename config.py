@@ -30,8 +30,8 @@ _LOG_GROUP_ID = os.getenv("LOG_GROUP_ID")
 LOG_GROUP_ID = int(_LOG_GROUP_ID) if _LOG_GROUP_ID and _LOG_GROUP_ID.strip() not in ("", "0") else OWNER_ID
 
 # --- Support & Social ---
-SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "NakaiStore")
-SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "NakaiStore")
+SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "BooBoxCH")
+SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "OneFoldStore")
 
 # --- Web Service Settings ---
 WEB_SERVICE = os.getenv("WEB_SERVICE", "False").lower() in ("true", "1", "t")
