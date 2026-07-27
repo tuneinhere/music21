@@ -119,7 +119,7 @@ async def tag_all_users(_, message: Message):
             emoji_idx = 0
             batch_count = 0
             
-            markup = InlineKeyboardMarkup([[InlineKeyboardButton("🚫 Stop", callback_data=f"stop:{chat_id}")]])
+            markup = InlineKeyboardMarkup([[InlineKeyboardButton("🚫 Berhentikan", callback_data=f"stop:{chat_id}", style=ButtonStyle.Danger))]])
 
             async def _flush(batch_text: str):
                 nonlocal first_msg_link
@@ -169,7 +169,7 @@ async def tag_all_users(_, message: Message):
                 time_str = datetime.now(WIB).strftime("%H:%M:%S")
                 history_state["data"][chat_id].append({"time": time_str, "link": first_msg_link})
 
-            btn_delete = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 Hapus Semua Tagall", callback_data="delete_all")]])
+            btn_delete = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 Hapus Semua Tagall", callback_data="delete_all", style=ButtonStyle.PRIMARY))]])
             await progress.edit_text(
                 f"✅ <b>Tagging Selesai!</b>\n👥 Total member: <b>{len(members)}</b>\n🏷 Berhasil ditag: <b>{total_tagged}</b>",
                 reply_markup=btn_delete
