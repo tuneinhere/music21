@@ -1,6 +1,5 @@
 import asyncio
 import time
-from pyrogram.enums import ButtonStyle
 import random
 from typing import Dict, Tuple, List
 from datetime import datetime, timezone, timedelta
@@ -172,8 +171,7 @@ async def tag_all_users(_, message: Message):
                 time_str = datetime.now(WIB).strftime("%H:%M:%S")
                 history_state["data"][chat_id].append({"time": time_str, "link": first_msg_link})
 
-            btn_delete = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 Hapus Semua Tagall", callback_data="delete_all", style=ButtonStyle.PRIMARY)
-            from pyrogram.enums import ButtonStyle)]])
+            btn_delete = InlineKeyboardMarkup([[InlineKeyboardButton("🗑 Hapus Semua Tagall", callback_data="delete_all", style=ButtonStyle.PRIMARY)]])
             await progress.edit_text(
                 f"✅ <b>Tagging Selesai!</b>\n👥 Total member: <b>{len(members)}</b>\n🏷 Berhasil ditag: <b>{total_tagged}</b>",
                 reply_markup=btn_delete
