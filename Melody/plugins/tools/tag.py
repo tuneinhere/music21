@@ -121,7 +121,7 @@ async def tag_all_users(_, message: Message):
             emoji_idx = 0
             batch_count = 0
             
-            markup = InlineKeyboardMarkup([[InlineKeyboardButton("🚫 Berhentikan", callback_data=f"stop:{chat_id}", style=ButtonStyle.Danger))]])
+            markup = InlineKeyboardMarkup([[InlineKeyboardButton("🚫 Berhentikan", callback_data=f"stop:{chat_id}", style=ButtonStyle.Danger)]])
 
             async def _flush(batch_text: str):
                 nonlocal first_msg_link
