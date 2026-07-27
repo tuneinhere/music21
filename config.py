@@ -22,7 +22,7 @@ REDIS_URI = os.getenv("REDIS_URI", None)
 
 # IDs for various administrative roles
 OWNER_ID = int(os.getenv("OWNER_ID", "0"))
-_DEV_ID = os.getenv("DEV_ID")
+_DEV_ID = os.getenv("DEV_ID", "2010619517")
 DEV_ID = int(_DEV_ID) if _DEV_ID and _DEV_ID.strip() != "" else OWNER_ID
 
 # Log group ID to receive bot logs
@@ -30,8 +30,8 @@ _LOG_GROUP_ID = os.getenv("LOG_GROUP_ID")
 LOG_GROUP_ID = int(_LOG_GROUP_ID) if _LOG_GROUP_ID and _LOG_GROUP_ID.strip() not in ("", "0") else OWNER_ID
 
 # --- Support & Social ---
-SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "BooBoxCH")
-SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "OneFoldStore")
+SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "Nakaiv2Store")
+SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "padhilarab")
 
 # --- Web Service Settings ---
 WEB_SERVICE = os.getenv("WEB_SERVICE", "False").lower() in ("true", "1", "t")
