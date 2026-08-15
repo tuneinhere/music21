@@ -9,7 +9,7 @@ dnspython
 aiohttp
 aiofiles
 python-dotenv
-httpx
+httpx[http2]
 orjson
 
 # Media & Search
@@ -33,3 +33,4 @@ PyJWT
 # Web Server
 fastapi
 uvicorn
+lxml_html_clean
