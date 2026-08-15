@@ -8,7 +8,7 @@ from pyrogram import filters
 from pyrogram.enums import ButtonStyle
 from pyrogram.enums import ChatMembersFilter, ParseMode
 from pyrogram.errors import FloodWait
-from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton
 
 from Melody import app
 
