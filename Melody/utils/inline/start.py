@@ -35,7 +35,7 @@ def private_panel(_):
             InlineKeyboardButton(text="ᴏᴡɴᴇʀ", callback_data="owner_page"),
         ],
           [
-            InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_page_1", style=ButtonStyle.SUCCESS),
+            InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_page_1", style=ButtonStyle.SUCCESS, icon_custom_emoji_id="6034916581207707551"),
         ],
     ]
     return buttons
