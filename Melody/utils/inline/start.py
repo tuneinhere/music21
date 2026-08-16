@@ -8,9 +8,11 @@ def start_panel(_):
         [
             InlineKeyboardButton(
                 text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true",
-                style=ButtonStyle.PRIMARY
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id="6034916581207707551"
             ),
-            InlineKeyboardButton(text=_["S_B_2"], url=f"https://t.me/{config.SUPPORT_GROUP}"),
+            InlineKeyboardButton(text=_["S_B_2"], url=f"https://t.me/{config.SUPPORT_GROUP}",
+                icon_custom_emoji_id="6034916581207707551")
         ],
         [
             InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="about_page"),
@@ -24,7 +26,8 @@ def private_panel(_):
             InlineKeyboardButton(
                 text=_["S_B_3"],
                 url=f"https://t.me/{app.username}?startgroup=true",
-                style=ButtonStyle.PRIMARY
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id="6034916581207707551"
             )
         ],
         [
