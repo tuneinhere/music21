@@ -26,7 +26,8 @@ def track_markup(_, videoid, user_id, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
-                callback_data=f"forceclose {videoid}|{user_id}",
+                callback_data=f"forceclose {videoid}|{user_id}", style=ButtonStyle.DANGER,
+                    icon_custom_emoji_id="5323451799766582382",
             )
         ],
     ]
@@ -47,7 +48,7 @@ def stream_markup_timer(_, chat_id, played, dur, is_playing=True):
     q_btn = []
     if queue_len > 1:
         videoid = db.get(chat_id)[0]['vidid']
-        q_btn = [InlineKeyboardButton(text="📋", callback_data=f"GetQueued g|{videoid}", style=ButtonStyle.PRIMARY)]
+        q_btn = [InlineKeyboardButton(text="Daftar Queue", callback_data=f"GetQueued g|{videoid}", style=ButtonStyle.PRIMARY, icon_custom_emoji_id="5445275347366989283")]
 
     buttons = [
         [
@@ -59,10 +60,10 @@ def stream_markup_timer(_, chat_id, played, dur, is_playing=True):
         [
             InlineKeyboardButton(text="❚❚" if is_playing else "▶︎", callback_data=f"ADMIN Toggle|{chat_id}", style=ButtonStyle.PRIMARY),
             InlineKeyboardButton(text="⏭", callback_data=f"ADMIN Skip|{chat_id}", style=ButtonStyle.PRIMARY),
-            InlineKeyboardButton(text="⏹", callback_data=f"ADMIN Stop|{chat_id}", style=ButtonStyle.DANGER),
+            InlineKeyboardButton(text="⏹", callback_data=f"ADMIN Stop|{chat_id}", style=ButtonStyle.DANGER, icon_custom_emoji_id="5323734662017727761"),
         ],
         [
-            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close", style=ButtonStyle.DANGER),
+            InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close", style=ButtonStyle.DANGER, icon_custom_emoji_id="5323451799766582382"),
         ],
     ]
     return buttons
