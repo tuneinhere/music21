@@ -45,8 +45,8 @@ def private_panel(_):
 def about_panel(_):
     buttons = [
         [
-            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{config.SUPPORT_CHANNEL}"),
-            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{config.SUPPORT_GROUP}"),
+            InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{config.SUPPORT_CHANNEL}", style=ButtonStyle.SUCCESS, icon_custom_emoji_id="6138927954538795135"),
+            InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{config.SUPPORT_GROUP}", style=ButtonStyle.SUCCESS, icon_custom_emoji_id="6138927954538795135"),
         ],
         [
             InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="settingsback_helper", style=ButtonStyle.DANGER, icon_custom_emoji_id="5321532361702127913")
@@ -57,8 +57,8 @@ def about_panel(_):
 def owner_panel(_):
     buttons = [
         [
-            InlineKeyboardButton(text=_["S_B_12"], user_id=config.OWNER_ID),
-            InlineKeyboardButton(text=_["S_B_5"], user_id=config.DEV_ID),
+            InlineKeyboardButton(text=_["S_B_12"], user_id=config.OWNER_ID, style=ButtonStyle.DANGER, icon_custom_emoji_id="4956420911310832630"),
+            InlineKeyboardButton(text=_["S_B_5"], user_id=config.DEV_ID, style=ButtonStyle.DANGER, icon_custom_emoji_id="4956420911310832630"),
         ],
         [
             InlineKeyboardButton(text=_["BACK_BUTTON"], callback_data="settingsback_helper", style=ButtonStyle.DANGER, icon_custom_emoji_id="5321532361702127913"),
