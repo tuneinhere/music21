@@ -31,7 +31,7 @@ def help_pannel_page1(_, START: Union[bool, int] = None):
                 InlineKeyboardButton(text=_["H_B_10"], callback_data="help_callback hb10", style=ButtonStyle.PRIMARY, icon_custom_emoji_id="5321097148371058002"),
             ],
             [
-                InlineKeyboardButton(text="️Back page", callback_data="help_page_3", style=ButtonStyle.SUCCESS, icon_custom_emoji_id="5321532361702127913")),
+                InlineKeyboardButton(text="️Back page", callback_data="help_page_3", style=ButtonStyle.SUCCESS, icon_custom_emoji_id="5321532361702127913"))
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"] if START else _["CLOSE_BUTTON"],
                     callback_data="settingsback_helper" if START else "close",
