@@ -6,19 +6,22 @@ def stats_buttons(_, status):
         InlineKeyboardButton(
             text=_["SA_B_1"],
             callback_data="TopOverall",
-            style=ButtonStyle.PRIMARY
+            style=ButtonStyle.PRIMARY, 
+            icon_custom_emoji_id="4956214478002717877"
         )
     ]
     sudo = [
         InlineKeyboardButton(
             text=_["SA_B_2"],
             callback_data="bot_stats_sudo",
-            style=ButtonStyle.PRIMARY
+            style=ButtonStyle.PRIMARY,
+            icon_custom_emoji_id="4956552088201986883"
         ),
         InlineKeyboardButton(
             text=_["SA_B_3"],
             callback_data="TopOverall",
-            style=ButtonStyle.PRIMARY
+            style=ButtonStyle.PRIMARY,
+            icon_custom_emoji_id="4956214478002717877"
         ),
     ]
     upl = InlineKeyboardMarkup(
@@ -28,6 +31,8 @@ def stats_buttons(_, status):
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"],
                     callback_data="close",
+                    style=ButtonStyle.DANGER,
+                    icon_custom_emoji_id="5323451799766582382"
                 ),
             ],
         ]
@@ -41,11 +46,14 @@ def back_stats_buttons(_):
                 InlineKeyboardButton(
                     text=_["BACK_BUTTON"],
                     callback_data="stats_back",
-                    style=ButtonStyle.DANGER
+                    style=ButtonStyle.SUCCESS,
+                    icon_custom_emoji_id="5321532361702127913"
                 ),
                 InlineKeyboardButton(
                     text=_["CLOSE_BUTTON"],
                     callback_data="close",
+                    style=ButtonStyle.DANGER,
+                    icon_custom_emoji_id="5323451799766582382"
                 ),
             ],
         ]
