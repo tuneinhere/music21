@@ -19,17 +19,18 @@ SLEEP_BETWEEN = 2
 AUTO_DELETE_DELAY = 60  
 _PER_MENTION_EST = 52
 
-EMOJI = [
-    f"<emoji id='5447408120752013199'>⚠️</emoji>", 
-    f"<emoji id='6138734174204334369'>👀</emoji>", 
-    f"<emoji id='4958642964181025908'>💀</emoji>", 
-    f"<emoji id='4956285860359177035'>👻</emoji>", 
-    f"<emoji id='4958728373900674046'>📍</emoji>",
-    f"<emoji id='4956282956961285265'>😥</emoji>", 
-    f"<emoji id='4956525562483967357'>🃏</emoji>", 
-    f"<emoji id='4956561910792192697'>🧪</emoji>", 
-    f"<emoji id='5474270203430872352'>🎲</emoji>", 
-    f"<emoji id='5474206796828682295'>🦈</emoji>"
+# Jadikan satu list berisi masing-masing tag premium
+EMOJI_PREMIUM = [
+    "<emoji id='5447408120752013199'>⚠️</emoji>", 
+    "<emoji id='6138734174204334369'>👀</emoji>", 
+    "<emoji id='4958642964181025908'>💀</emoji>", 
+    "<emoji id='4956285860359177035'>👻</emoji>", 
+    "<emoji id='4958728373900674046'>📍</emoji>",
+    "<emoji id='4956282956961285265'>😥</emoji>", 
+    "<emoji id='4956525562483967357'>🃏</emoji>", 
+    "<emoji id='4956561910792192697'>🧪</emoji>", 
+    "<emoji id='5474270203430872352'>🎲</emoji>", 
+    "<emoji id='5474206796828682295'>🦈</emoji>"
 ]
 
 
@@ -125,12 +126,9 @@ async def tag_all_users(_, message: Message):
             await progress.edit_text(f"⏳ <b>Memulai tag untuk {len(members)} member...</b>")
             
             usertxt = ""
-            emoji_seq = random.choice(EMOJI)
-            emoji_idx = 0
             batch_count = 0
             
-            markup = InlineKeyboardMarkup([[InlineKeyboardButton("Berhentikan", callback_data=f"stop:{chat_id}", style=ButtonStyle.DANGER, icon_custom_emoji_id="6034916581207707551")]]
-            )
+            markup = InlineKeyboardMarkup([[InlineKeyboardButton("Berhentikan", callback_data=f"stop:{chat_id}", style=ButtonStyle.DANGER, icon_custom_emoji_id="6034916581207707551")]])
 
             async def _flush(batch_text: str):
                 nonlocal first_msg_link
@@ -154,9 +152,10 @@ async def tag_all_users(_, message: Message):
                 if not member.user or member.user.is_deleted or member.user.is_bot:
                     continue
 
-                emoji = emoji_seq[emoji_idx % len(emoji_seq)]
+                # Perbaikan logika emoji premium
+                emoji = random.choice(EMOJI_PREMIUM)
                 tag = f'<a href="tg://user?id={member.user.id}">{emoji}</a> '
-                emoji_idx += 1
+                
                 total_tagged += 1
                 batch_count += 1
                 usertxt += tag
@@ -165,8 +164,6 @@ async def tag_all_users(_, message: Message):
                     await _flush(usertxt)
                     usertxt = ""
                     batch_count = 0
-                    emoji_seq = random.choice(EMOJI)
-                    emoji_idx = 0
 
             if usertxt:
                 await _flush(usertxt)
