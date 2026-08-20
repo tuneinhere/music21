@@ -21,16 +21,16 @@ _PER_MENTION_EST = 52
 
 # Jadikan satu list berisi masing-masing tag premium
 EMOJI_PREMIUM = [
-    "<emoji id='5447408120752013199'>⚠️</emoji>", 
-    "<emoji id='6138734174204334369'>👀</emoji>", 
-    "<emoji id='4958642964181025908'>💀</emoji>", 
-    "<emoji id='4956285860359177035'>👻</emoji>", 
-    "<emoji id='4958728373900674046'>📍</emoji>",
-    "<emoji id='4956282956961285265'>😥</emoji>", 
-    "<emoji id='4956525562483967357'>🃏</emoji>", 
-    "<emoji id='4956561910792192697'>🧪</emoji>", 
-    "<emoji id='5474270203430872352'>🎲</emoji>", 
-    "<emoji id='5474206796828682295'>🦈</emoji>"
+    f"<emoji id='5447408120752013199'>⚠️</emoji>", 
+    f"<emoji id='6138734174204334369'>👀</emoji>", 
+    f"<emoji id='4958642964181025908'>💀</emoji>", 
+    f"<emoji id='4956285860359177035'>👻</emoji>", 
+    f"<emoji id='4958728373900674046'>📍</emoji>",
+    f"<emoji id='4956282956961285265'>😥</emoji>", 
+    f"<emoji id='4956525562483967357'>🃏</emoji>", 
+    f"<emoji id='4956561910792192697'>🧪</emoji>", 
+    f"<emoji id='5474270203430872352'>🎲</emoji>", 
+    f"<emoji id='5474206796828682295'>🦈</emoji>"
 ]
 
 
