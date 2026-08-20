@@ -20,9 +20,18 @@ AUTO_DELETE_DELAY = 60
 _PER_MENTION_EST = 52
 
 EMOJI = [
-    "🦋🦋🦋🦋🦋", "🧚🌸🧋🍬🫖", "🥀🌷🌹🌺💐", "🌸🌿💮🌱🌵", "❤️💚💙💜🖤",
-    "🍔🦪🍛🍲🥗", "🍎🍓🍒🍑🌶️", "🧋🥤🧋🥛🍷", "🍬🍭🧁🎂🍡", "🍨🧉🍺☕🍻"
+    f"<emoji id='5447408120752013199'>⚠️</emoji>", 
+    f"<emoji id='6138734174204334369'>👀</emoji>", 
+    f"<emoji id='4958642964181025908'>💀</emoji>", 
+    f"<emoji id='4956285860359177035'>👻</emoji>", 
+    f"<emoji id='4958728373900674046'>📍</emoji>",
+    f"<emoji id='4956282956961285265'>😥</emoji>", 
+    f"<emoji id='4956525562483967357'>🃏</emoji>", 
+    f"<emoji id='4956561910792192697'>🧪</emoji>", 
+    f"<emoji id='5474270203430872352'>🎲</emoji>", 
+    f"<emoji id='5474206796828682295'>🦈</emoji>"
 ]
+
 
 # ── State & Memory ─────────────────────────────────────────────────────────────
 TASKS: Dict[int, asyncio.Task] = {}          # Menyimpan task per chat untuk cancel instan
